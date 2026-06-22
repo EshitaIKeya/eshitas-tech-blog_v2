@@ -2,6 +2,10 @@
 
 A full-stack personal blog with **AI-powered summaries**, **read-aloud**, and **syntax-highlighted code blocks** — built with FastAPI, React, and PostgreSQL, running in Docker.
 
+**Live demo:** [eshitas-tech-blog-v2.vercel.app](https://eshitas-tech-blog-v2.vercel.app) · **API docs:** [eshitas-blog-api.onrender.com/docs](https://eshitas-blog-api.onrender.com/docs)
+
+> Note: both the frontend and backend run on free hosting tiers, so the first load after inactivity may take 10-30 seconds while the services wake up.
+
 ## What makes this blog different
 
 - **AI-generated summaries** — admin clicks a button, Groq writes a 2-3 sentence TL;DR (optional, uses your own free API key)
