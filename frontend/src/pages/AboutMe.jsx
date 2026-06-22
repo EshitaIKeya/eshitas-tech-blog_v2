@@ -27,17 +27,20 @@ function AboutMe() {
             software engineering. If you're a beginner like me, I hope my
             posts help you understand things in simple terms.
           </p>
-          <h3>Tech I work with</h3>
-          <div className="tech-pills">
-            <span className="tech-pill">Python</span>
-            <span className="tech-pill">FastAPI</span>
-            <span className="tech-pill">PostgreSQL</span>
-            <span className="tech-pill">SQLAlchemy</span>
-            <span className="tech-pill">React</span>
-            <span className="tech-pill">JavaScript</span>
-            <span className="tech-pill">Docker</span>
-            <span className="tech-pill">Git</span>
-          </div>
+         <h3>Tech I work with</h3>
+<div className="tech-pills">
+  <span className="tech-pill">Python</span>
+  <span className="tech-pill">FastAPI</span>
+  <span className="tech-pill">PostgreSQL</span>
+  <span className="tech-pill">SQLAlchemy</span>
+  <span className="tech-pill">React</span>
+  <span className="tech-pill">JavaScript</span>
+  <span className="tech-pill">Docker</span>
+  <span className="tech-pill">Git</span>
+  <span className="tech-pill">Neon</span>
+  <span className="tech-pill">Render</span>
+  <span className="tech-pill">Vercel</span>
+</div>
           <h3>Connect</h3>
           <p>
             <a href="https://www.linkedin.com/in/eshita-islam-keya-5504b230a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
