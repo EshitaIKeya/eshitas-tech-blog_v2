@@ -6,15 +6,18 @@ function AboutMe() {
         <div className="about-avatar">E</div>
         <div className="about-body">
           <p>
-            Hi! I'm <strong>Eshita Islam</strong>, an ICE student at BUP
-            and intern at Apurba Technologies Inc. I'm passionate about backend
+            Hi! I'm <strong>Eshita Islam</strong>, an ICE (Information and
+            Communication Engineering) student at BUP and an intern at
+            Apurba Technologies Inc. I'm passionate about backend
             development, web technologies, and learning in public.
           </p>
           <p>
             I built this blog from scratch as a learning project to understand
-            full-stack web development with the guidance of my teamlead Jayanto Mondel. The backend is powered by
-            <strong> FastAPI</strong> with <strong>PostgreSQL</strong>, and the
-            frontend uses <strong>React</strong>. Everything runs in
+            full-stack web development, guided throughout by my team lead at
+            Apurba, <strong>Jayanto Mondel</strong>, with encouragement from my
+            teammate <strong>Sourav Das Gupta</strong> along the way. The backend
+            is powered by <strong>FastAPI</strong> with <strong>PostgreSQL</strong>,
+            and the frontend uses <strong>React</strong>. Everything runs in
             <strong> Docker</strong> containers. Posts even have <strong>AI-generated
             summaries</strong> and a <strong>read-aloud</strong> feature.
           </p>
