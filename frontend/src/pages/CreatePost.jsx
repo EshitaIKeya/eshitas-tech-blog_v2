@@ -69,8 +69,7 @@ function CreatePost() {
     setLoading(false);
   }
 
-  async function handleGenerateSummary() {
-    // Require title, category, and content before generating
+ async function handleGenerateSummary() {
     if (!title.trim()) {
       setError("Please enter a title first");
       return;
@@ -84,27 +83,34 @@ function CreatePost() {
       return;
     }
 
+    // If the post hasn't been saved yet, tell the user to publish first
+    if (!isEditing) {
+      setError("Please publish the post first, then edit it to generate an AI summary.");
+      return;
+    }
+
     setAiLoading(true);
     setError("");
     try {
-      // Save (or update) the post first, then ask AI for a summary
-      let postId = id;
-      if (!postId) {
-        // Creating: save the post as a draft first
-        const res = await api.post("/posts/", {
-          title: title.trim(), content,
-          category_id: parseInt(categoryId), summary: null,
-          cover_image_url: coverImageUrl || null,
-        });
-        postId = res.data.id;
-      } else {
-        // Editing: save current changes before generating
-        await api.put("/posts/" + postId, {
-          title: title.trim(), content, category_id: parseInt(categoryId),
-          summary: null, cover_image_url: coverImageUrl || null,
-        });
-      }
+      // Save current changes before generating
+      await api.put("/posts/" + id, {
+        title: title.trim(), content, category_id: parseInt(categoryId),
+        summary: null, cover_image_url: coverImageUrl || null,
+      });
 
+      // Now call the AI summary endpoint
+      const res = await api.post("/posts/" + id + "/generate-summary");
+      setSummary(res.data.summary);
+    } catch (err) {
+      const detail = err.response?.data?.detail || "AI summary failed";
+      if (detail.includes("GROQ_API_KEY")) {
+        setError("AI summary needs an API key. Set GROQ_API_KEY in your backend .env file.");
+      } else {
+        setError(detail);
+      }
+    }
+    setAiLoading(false);
+  }
       // Now call the AI summary endpoint
       const res = await api.post("/posts/" + postId + "/generate-summary");
       setSummary(res.data.summary);
