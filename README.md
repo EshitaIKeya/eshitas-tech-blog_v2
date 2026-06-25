@@ -208,7 +208,7 @@ Full interactive docs at `/docs` (Swagger UI).
 
 ## Built By
 
-**Eshita Islam** — CS student, intern at Apurba Technologies Inc.
+**Eshita Islam Keya** — ICE student, intern at Apurba Technologies Inc.
 
 Built from scratch as a learning project covering: database design, REST APIs, JWT authentication, React frontend, Docker containerization, and AI integration.
 
